@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('10.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  animation: fadeInDown 1s ease-in-out;
+  padding: 1rem;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-nav {
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar .nav-link, 
+.navbar .navbar-brand {
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: color 0.3s ease-in-out;
+  animation: fadeInMenu 1s forwards;
+}
+
+.navbar .nav-link:hover, 
+.navbar .navbar-brand:hover {
+  color: #f8d7da;
+}
+
+.navbar .nav-link:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.navbar .nav-link:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.navbar .nav-link:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeInMenu {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Styling */
+.content {
+  color: white; /* Warna font putih */
+  max-width: 800px; /* Batas lebar untuk artikel */
+  margin: 0 auto; /* Pusatkan konten */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Background semi-transparan untuk teks */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+  opacity: 0; /* Awalnya transparan untuk animasi */
+  animation: fadeInContent 1s forwards;
+  animation-delay: 1s; /* Sinkron dengan animasi lainnya */
+}
+
+@keyframes fadeInContent {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Artikel Styling */
+article {
+  margin-bottom: 20px;
+  opacity: 0; /* Awalnya transparan untuk animasi */
+  animation: fadeInArticle 1s forwards;
+}
+
+article:nth-child(2) {
+  animation-delay: 1.5s;
+}
+article:nth-child(3) {
+  animation-delay: 2s;
+}
+article:nth-child(4) {
+  animation-delay: 2.5s;
+}
+article:nth-child(5) {
+  animation-delay: 3s;
+}
+
+@keyframes fadeInArticle {
+  to {
+    opacity: 1;
+  }
+}
+
+h3 {
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+ol {
+  padding-left: 20px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
